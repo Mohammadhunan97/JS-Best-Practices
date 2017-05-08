@@ -1,4 +1,4 @@
-Declare almost all variables on the top, but not necessarily defined on top (the only occasion when this is not true is variables declared
+1. Declare almost all variables on the top, but not necessarily defined on top (the only occasion when this is not true is variables declared
 inside bracket scope for specific functionality, this is why we use let instead of var): 
 
         var a, b; var c = [];
@@ -9,7 +9,14 @@ inside bracket scope for specific functionality, this is why we use let instead 
         
 This will give no errors and it is clear what variables due.      
 
-Write named functions not anonymous functions. This is because we want hoisting capabilities, we NEVER want to rely on hoisting, but if a 
+2. Write named functions not anonymous functions. This is because we want hoisting capabilities, we NEVER want to rely on hoisting, but if a 
 more junior developer than us (or just someone who doesn't notice where the function is defined) inherits our code, we do not want them
 getting errors and not realizing. This is also so we can later add functions like 'getRand' (see mkrJS repository) to the bottom of our 
 code and use them, without negatively effecting the code above it.
+
+3. Functions which return true or false values, should be named with a question mark at the end as such:
+
+        function loggedIn?(){
+        }
+   This convention is for readability as well as ease of understanding of codebase for other devs     
+        
