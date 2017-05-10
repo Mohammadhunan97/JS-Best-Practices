@@ -20,3 +20,11 @@ code and use them, without negatively effecting the code above it.
         }
    This convention is for readability as well as ease of understanding of codebase for other devs     
         
+
+
+4. Use const by default, use let for variables that you know you will have to change later. This is for clarity purposes. For instance,
+        const header = document.getElementById('header'); //value won't change so we declare it as a const
+        let amt = 80; //value that might change
+        amt = amt += 12
+        header.innerText = amt;
+99% of the time don't use var because it has function scope and most of the time we would rather have bracket scope. 
