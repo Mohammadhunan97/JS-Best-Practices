@@ -14,9 +14,9 @@ more junior developer than us (or just someone who doesn't notice where the func
 getting errors and not realizing. This is also so we can later add functions like 'getRand' (see mkrJS repository) to the bottom of our 
 code and use them, without negatively effecting the code above it.
 
-3. Functions which return true or false values, should be named with a question mark at the end as such:
+3. Functions which return true or false values, should be named with an is at the start of the variable for convention:
 
-        function loggedIn?(){
+        function isLoggedIn(){
         }
    This convention is for readability as well as ease of understanding of codebase for other devs     
         
